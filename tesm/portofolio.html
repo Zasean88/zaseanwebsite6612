@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Saya</title>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --header-bg: #4a90e2;
+      --nav-bg: #333;
+      --card-bg: #fff;
+      --footer-bg: #eee;
+    }
+
+    .dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f9f9f9;
+      --header-bg: #222;
+      --nav-bg: #111;
+      --card-bg: #2a2a2a;
+      --footer-bg: #2e2e2e;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.5s ease;
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      display: flex;
+      justify-content: center;
+      transition: background-color 0.5s ease;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project {
+      background-color: var(--card-bg);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.5s ease, box-shadow 0.3s ease;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project-header img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--footer-bg);
+      transition: background-color 0.5s ease;
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-mode .toggle-button {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .project-header h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>zasean</h1>
+  <p>Web Developer | Crypto investor | alchemist mastery</p>
+  <button class="toggle-button" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
+
+<nav>
+  <a href="#tentang">Tentang</a>
+  <a href="#portofolio">Portofolio</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section id="tentang">
+  <h2>Tentang Saya</h2>
+  <p>
+    Ada banyak cara memahami pasar, saya memilih jalan yang tidak biasa. Saya memulai dari rasa penasaran terhadap pergerakan harga yang tampaknya acak, lalu menemukan pola tersembunyi melalui pendekatan Smart Money Concept.
+    <br><br>
+    Di balik layar, saya adalah seorang pengembang web yang membangun bukan hanya antarmuka, tapi juga strategi. Saya aktif sebagai crypto trader dan investor, memadukan logika, intuisi, dan analisa untuk membaca jejak para pelaku besar di pasar.
+    <br><br>
+    Saya percaya: informasi adalah kekuatan, tapi eksekusi yang tenang adalah kunci.
+  </p>
+</section>
+
+<section id="portofolio">
+  <h2>Portofolio saya</h2>
+  <div class="project">
+    <div class="project-header">
+      <img src="btc.png" alt="Bitcoin Logo">
+      <h3>$BITCOIN</h3>
+    </div>
+    <p>Coin ini adalah pendekatan personal saya dalam membangun portofolio berbasis Bitcoin (BTC) sebagai aset utama. Saya menggunakan analisis teknikal berbasis Smart Money Concept untuk mengidentifikasi zona akumulasi institusional, serta memanfaatkan on-chain metric untuk mendeteksi momen akumulasi yang optimal. Tujuannya adalah memaksimalkan pertumbuhan jangka panjang dengan risiko terukur.</p>
+  </div>
+  <div class="project">
+    <div class="project-header">
+      <img src="usdt.png" alt="USDT Logo">
+      <h3>$USDT</h3>
+    </div>
+    <p>Coin ini berfokus pada penggunaan stablecoin USDT sebagai alat lindung nilai terhadap volatilitas pasar kripto. Saya mengembangkan sistem pengelolaan alokasi aset yang dinamis, memindahkan sebagian kapital ke USDT saat pasar menunjukkan tanda-tanda distribusi atau fase overbought. Ini adalah bagian dari strategi perlindungan modal dan kesiapan untuk re-entry saat pasar korektif.</p>
+  </div>
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: zaseanmz@gmail.com</p>
+  <p>Discord: zasean_mz</p>
+  <p>GitHub: <a href="https://github.com/Zasean88" target="_blank">Zasean88</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Zasean. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const btn = document.querySelector('.toggle-button');
+    btn.textContent = document.body.classList.contains('dark-mode')
+      ? '☀️ Light Mode'
+      : '🌙 Dark Mode';
+  }
+</script>
+
+</body>
+</html>
